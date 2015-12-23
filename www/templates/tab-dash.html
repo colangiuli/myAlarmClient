@@ -1,9 +1,9 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <button ng-click="armed.$value = false" ng-show="armed.$value == true" class="button button-full button-assertive">
+    <button ng-click="armed.$value = 0" ng-show="armed.$value == 1" class="button button-full button-assertive">
       Disarm System!
     </button>
-    <button ng-click="armed.$value = true" ng-show="armed.$value == false" class="button button-full button-positive">
+    <button ng-click="armed.$value = 1" ng-show="armed.$value == 0" class="button button-full button-positive">
       Arm System!
     </button>
   </ion-content>
