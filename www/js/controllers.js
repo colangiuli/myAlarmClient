@@ -1,6 +1,17 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', function($scope, $firebaseObject) {
+  var ref = new Firebase("https://blistering-torch-2339.firebaseio.com//armed");
+  
+  // download the data into a local object
+  var syncObject = $firebaseObject(ref);
+  
+  // synchronize the object with a three-way data binding
+  syncObject.$bindTo($scope, "armed");
+
+  
+
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
