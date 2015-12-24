@@ -1,10 +1,72 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <button ng-click="armed.$value = 0" ng-show="armed.$value == 1" class="button button-full button-assertive">
-      Disarm System!
-    </button>
-    <button ng-click="armed.$value = 1" ng-show="armed.$value == 0" class="button button-full button-positive">
-      Arm System!
-    </button>
+
+
+    <div class="list card">
+      <div class="item item-divider">Allarme</div>
+      <div class="item item-body">
+        <center>
+          <div>
+            <button ng-click="armed.$value = 0" ng-show="armed.$value == 1" class="button  button-assertive">
+              Disarm System!
+            </button>
+            <button ng-click="armed.$value = 1" ng-show="armed.$value == 0" class="button  button-positive">
+              Arm System!
+            </button>
+          </div>
+        </center>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Soggiorno</div>
+      <div class="item item-body">
+        <div class="row">
+          <div class="col"><i class="icon ion-battery-full"></i> battery</div>
+          <div class="col"><i class="icon ion-ios-rainy"></i> humidity</div>
+          <div class="col"><i class="icon ion-thermometer"></i> temperature</div>
+          <div class="col"><i class="icon ion-ios-sunny"></i> light </div>
+        </div>      
+        <div class="row">
+          <div class="col">{{sensor_data.soggiorno.battery}}</div>
+          <div class="col">{{sensor_data.soggiorno.humidity}} %</div>
+          <div class="col">{{sensor_data.soggiorno.temperature}}  °C</div>
+          <div class="col">{{sensor_data.soggiorno.light}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">C. Letto</div>
+      <div class="item item-body">
+        <div class="row">
+          <div class="col"><i class="icon ion-battery-full"></i> battery</div>
+          <div class="col"><i class="icon ion-ios-rainy"></i> humidity</div>
+          <div class="col"><i class="icon ion-thermometer"></i> temperature</div>
+          <div class="col"><i class="icon ion-ios-sunny"></i> light </div>
+        </div>      
+        <div class="row">
+          <div class="col">{{sensor_data.letto.battery}} </div>
+          <div class="col">{{sensor_data.letto.humidity}} %</div>
+          <div class="col">{{sensor_data.letto.temperature}}  °C</div>
+          <div class="col">{{sensor_data.letto.light}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Esterno</div>
+      <div class="item item-body">
+        <div class="row">
+          <div class="col"><i class="icon ion-battery-full"></i> battery</div>
+          <div class="col"><i class="icon ion-ios-rainy"></i> humidity</div>
+          <div class="col"><i class="icon ion-thermometer"></i> temperature</div>
+          <div class="col"><i class="icon ion-ios-sunny"></i> light </div>
+        </div>      
+        <div class="row">
+          <div class="col">{{sensor_data.esterno.battery}} </div>
+          <div class="col">{{sensor_data.esterno.humidity}}</div>
+          <div class="col">{{sensor_data.esterno.temperature}}  °C</div>
+          <div class="col">{{sensor_data.esterno.light}}</div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

@@ -1,15 +1,19 @@
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope, $firebaseObject) {
-  var ref = new Firebase("https://blistering-torch-2339.firebaseio.com//armed");
-  
+  var ref_sensor_data = new Firebase("https://blistering-torch-2339.firebaseio.com/sensor_data");
+  // download the data into a local object
+  var sensor_dataSyncObject = $firebaseObject(ref_sensor_data);
+  // synchronize the object with a three-way data binding
+  sensor_dataSyncObject.$bindTo($scope, "sensor_data");
+
+  var ref = new Firebase("https://blistering-torch-2339.firebaseio.com/armed");
   // download the data into a local object
   var syncObject = $firebaseObject(ref);
-  
   // synchronize the object with a three-way data binding
   syncObject.$bindTo($scope, "armed");
 
-  
+
 
 })
 
