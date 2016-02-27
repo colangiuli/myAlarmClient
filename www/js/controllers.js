@@ -8,6 +8,16 @@ angular.module('starter.controllers', [])
   sensor_dataSyncObject.$bindTo($scope, "sensor_data");
 
   var ref = new Firebase("https://blistering-torch-2339.firebaseio.com/armed");
+  ref.authWithPassword({
+    email    : "dreammaster83@gmail.com",
+    password : "Firebasepswd!2016"
+  }, function(error, authData) {
+    if (error) {
+      console.log("Login Failed!", error);
+    } else {
+      console.log("Authenticated successfully with payload:", authData);
+    }
+  });
   // download the data into a local object
   var syncObject = $firebaseObject(ref);
   // synchronize the object with a three-way data binding

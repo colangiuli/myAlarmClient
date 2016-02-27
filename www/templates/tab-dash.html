@@ -19,30 +19,18 @@
     </div>
     <div class="list card">
       <div class="item item-divider">Soggiorno</div>
-      <div class="item item-body">
+      <div class="item item-body">  
         <div class="row">
-          <div class="col"><i class="icon ion-battery-full"></i></div>
-          <div class="col"><i class="icon ion-ios-rainy"></i></div>
-          <div class="col"><i class="icon ion-thermometer"></i></div>
-          <div class="col"><i class="icon ion-ios-sunny"></i></div>
-        </div>      
-        <div class="row">
-          <div class="col">{{sensor_data.soggiorno.battery}}</div>
-          <div class="col">{{sensor_data.soggiorno.humidity}} %</div>
-          <div class="col">{{sensor_data.soggiorno.temperature}}  °C</div>
-          <div class="col">{{sensor_data.soggiorno.light}}</div>
+          <div class="col"><i class="icon ion-battery-full"></i> <span> {{sensor_data.soggiorno.battery}}</span></div>
+          <div class="col"><i class="icon ion-ios-rainy"></i>  {{sensor_data.soggiorno.humidity}} %</div>
+          <div class="col"><i class="icon ion-thermometer"></i>  {{sensor_data.soggiorno.temperature}}  °C</div>
+          <div class="col"><i class="icon ion-ios-sunny"></i>  {{sensor_data.soggiorno.light}}</div>
         </div>
       </div>
     </div>
     <div class="list card">
       <div class="item item-divider">C. Letto</div>
-      <div class="item item-body">
-        <div class="row">
-          <div class="col"><i class="icon ion-battery-full"></i></div>
-          <div class="col"><i class="icon ion-ios-rainy"></i></div>
-          <div class="col"><i class="icon ion-thermometer"></i></div>
-          <div class="col"><i class="icon ion-ios-sunny"></i></div>
-        </div>      
+      <div class="item item-body">    
         <div class="row">
           <div class="col">{{sensor_data.letto.battery}} </div>
           <div class="col">{{sensor_data.letto.humidity}} %</div>
@@ -53,13 +41,7 @@
     </div>
     <div class="list card">
       <div class="item item-divider">Esterno</div>
-      <div class="item item-body">
-        <div class="row">
-          <div class="col"><i class="icon ion-battery-full"></i></div>
-          <div class="col"><i class="icon ion-ios-rainy"></i></div>
-          <div class="col"><i class="icon ion-thermometer"></i></div>
-          <div class="col"><i class="icon ion-ios-sunny"></i></div>
-        </div>      
+      <div class="item item-body">      
         <div class="row">
           <div class="col">{{sensor_data.esterno.battery}} </div>
           <div class="col">{{sensor_data.esterno.humidity}}</div>
