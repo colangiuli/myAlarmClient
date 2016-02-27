@@ -13,6 +13,7 @@ angular.module('starter.controllers', [])
     password : "Firebasepswd!2016"
   }, function(error, authData) {
     if (error) {
+      alert("Login Failed!", error);
       console.log("Login Failed!", error);
     } else {
       console.log("Authenticated successfully with payload:", authData);
