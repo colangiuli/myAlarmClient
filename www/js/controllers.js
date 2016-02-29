@@ -28,7 +28,7 @@ angular.module('starter.controllers', [])
 
 })
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('LogsCtrl', function($scope, $firebaseObject) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
   // To listen for when this page is active (for example, to refresh data),
@@ -36,10 +36,15 @@ angular.module('starter.controllers', [])
   //
   //$scope.$on('$ionicView.enter', function(e) {
   //});
+  var ref_logs= new Firebase("https://blistering-torch-2339.firebaseio.com/event_log");
+  // download the data into a local object
+  var ref_logsSyncObject = $firebaseObject(ref_logs);
+  // synchronize the object with a three-way data binding
+  ref_logsSyncObject.$bindTo($scope, "logs");
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+ // $scope.logs = Chats.all();
+  $scope.remove = function(log) {
+    Logs.remove(log);
   };
 })
 
