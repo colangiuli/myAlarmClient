@@ -1,0 +1,17 @@
+<ion-view view-title="Logs">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="log in logs | orderBy:'-date':true" type="item-text-wrap" >
+      <!-- href="#/tab/logs/{{log.id}}" -->
+        <img ng-src="">
+        <h2>{{log.kind}} {{log.zone_id}} </h2>
+        <p>{{log.date}}</p>
+<!--         <i class="icon ion-chevron-right icon-accessory"></i> -->
+
+<!--         <ion-option-button class="button-assertive" ng-click="remove(log)">
+          Delete
+        </ion-option-button> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
