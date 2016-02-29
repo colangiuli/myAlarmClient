@@ -17,6 +17,7 @@ angular.module('starter.controllers', [])
       console.log("Login Failed!", error);
     } else {
       console.log("Authenticated successfully with payload:", authData);
+      alert("autenticato con successo!");
     }
   });
   // download the data into a local object
