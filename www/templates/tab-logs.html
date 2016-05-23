@@ -1,9 +1,9 @@
 <ion-view view-title="Logs">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="log in logs | orderBy:'-date':true" type="item-text-wrap" >
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="log in logs | orderObjectBy:'date':true" type="item-text-wrap" >
       <!-- href="#/tab/logs/{{log.id}}" -->
-        <img ng-src="">
+        <img ng-src="img/icons/{{log.kind}}.jpg">
         <h2>{{log.kind}} {{log.zone_id}} </h2>
         <p>{{log.date}}</p>
 <!--         <i class="icon ion-chevron-right icon-accessory"></i> -->
