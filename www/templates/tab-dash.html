@@ -25,15 +25,15 @@
     <center>
     <div class="row row-center">
       <div class="col col-center">
-            <i class="icon ion-android-lock icon-accessory"  ng-click="armed.$value = 0" ng-show="armed.$value == 1" style="font-size: 300px !important;"></i>
+            <i class="icon ion-android-lock icon-accessory" ng-show="armed.$value >= 1" style="font-size: 300px !important;"></i>
 
-            <i class="icon ion-android-unlock icon-accessory"  ng-click="armed.$value = 1" ng-show="armed.$value == 0" style="font-size: 300px !important;"></i>
+            <i class="icon ion-android-unlock icon-accessory" ng-show="armed.$value == 0" style="font-size: 300px !important;"></i>
 
-            <button ng-show="armed.$value == 1" id="cameraTabDefaultPage-button1" class=" button button-positive button-large button-block icon-left ion-android-unlock ">Disarma</button>
+            <button ng-show="armed.$value >= 1" ng-click="armed.$value = 0" id="cameraTabDefaultPage-button1" class=" button button-positive button-large button-block icon-left ion-android-unlock ">Disarma</button>
             
-            <button ng-show="armed.$value == 0" id="cameraTabDefaultPage-button2" class=" button button-energized button-large button-block icon-left ion-android-lock ">Perimetrale</button>
+            <button ng-show="armed.$value == 0" ng-click="armed.$value = 1" id="cameraTabDefaultPage-button2" class=" button button-energized button-large button-block icon-left ion-android-lock ">Perimetrale</button>
 
-            <button ng-show="armed.$value == 0" id="cameraTabDefaultPage-button2" class=" button button-assertive button-large button-block icon-left ion-android-lock  ">Totale</button>
+            <button ng-show="armed.$value == 0" ng-click="armed.$value = 2" id="cameraTabDefaultPage-button2" class=" button button-assertive button-large button-block icon-left ion-android-lock  ">Totale</button>
 
       </div>
     </div>
